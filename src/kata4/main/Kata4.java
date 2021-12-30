@@ -7,6 +7,7 @@ import kata4.model.Mail;
 import kata4.view.HistogramDisplay;
 import static kata4.view.MailHistogramBuilder.build;
 import static kata4.view.MailListReader.read;
+import static kata4.view.MailListReaderBD.readBD;
 
 public class Kata4 {
     List<Mail> mailList;
@@ -25,7 +26,8 @@ public class Kata4 {
     }
     
     private void input() throws FileNotFoundException{
-        mailList = read("email/email.txt");
+        //mailList = read("email/email.txt");
+        mailList = readBD();
     }
     
     private void process(){
